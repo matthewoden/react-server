@@ -1,0 +1,1 @@
+webpackJsonp([1],{0:function(e,t,n){e.exports=n(5)},5:function(e,t,n){"use strict";var a=n(2),r=n(31),c=a.createClass({displayName:"pageTwo",render:function(){return a.createElement(r,{title:"Page Two | React Seed"},a.createElement("section",null,a.createElement("h2",null,"Page Two")))}});e.exports=c}});
