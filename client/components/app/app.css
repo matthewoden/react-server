@@ -1,0 +1,16 @@
+
+html {
+  font-family: "Arial";
+  background: #f7f7f7;
+}
+
+body {
+  font-size: 1.125em;
+  line-height: 1.388888889em;
+  margin: 0 auto;
+}
+
+/* apply a natural box layout model to all elements, but allowing components to change */
+*, *:before, *:after {
+  box-sizing: inherit;
+}

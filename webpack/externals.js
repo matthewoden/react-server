@@ -1,15 +1,5 @@
 'use strict';
-var env = require('./utils').env;
-
-module.exports = env({
-  develop:[],
-
-  production: [],
-
-  prerender:[
-  /^react(\/.*)?$/,
-  /^reflux(\/.*)?$/,
-  /^react-router(\/.*)?$/,
-  ]
-
-});
+module.exports = {
+  client:[],
+  server:[/^[a-z\-0-9]+$/]
+};

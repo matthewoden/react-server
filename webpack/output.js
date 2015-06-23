@@ -1,25 +1,17 @@
 'use strict';
-var env = require('./utils').env;
+var path = require('path');
 
-module.exports = env({
-  develop:{
-    path: require('path').resolve('./assets/public'),
-    publicPath: '/assets',
-    filename: '[name].js',
-  },
-
-  production:{
-    path: './assets/public',
+module.exports = {
+  client:{
+    path: path.resolve(__dirname, '../assets/public'),
     publicPath:'/assets',
     filename: '[hash].[name].js',
   },
 
-  prerender:{
-    path: './assets/prerender/',
+  server:{
+    path: path.resolve(__dirname, '../assets/prerender'),
+    publicPath:'/assets',
     filename: '[name].js',
-    /* IMPORTANT!
-     * For prerendering, you must compile to UMD or CommonJS
-     * so it can be required in a Node context: */
     libraryTarget: 'commonjs2'
    },
-});
+};

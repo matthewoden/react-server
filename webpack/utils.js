@@ -12,7 +12,7 @@ var env = function(config) {
 var makeStats = function() {
   this.plugin('done', function(stats) {
     require('fs').writeFileSync(
-      './app/stats.json',
+      './client/stats.json',
       JSON.stringify(stats.toJson()));
   });
 };

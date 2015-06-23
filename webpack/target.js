@@ -1,7 +1,6 @@
-var env = require('./utils').env;
 
-module.exports = env({
+module.exports = {
   develop:'web',
-  production:'web',
-  prerender:'node',
-});
+  client:'web',
+  server:'node',
+};

@@ -3,7 +3,6 @@
 
 .sass-cache/*
 */.sass-cache/*
-client/content/*
 *.tmp
 .tmp/*
 
@@ -30,6 +29,7 @@ $RECYCLE.BIN/
 */node_modules/*
 .node_modules/*
 node_modules/*
-
+assets/prerender/*
+assets/public/*
 
 npm-debug.log
