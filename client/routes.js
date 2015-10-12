@@ -1,18 +1,22 @@
 'use strict';
 import React from 'react';
-import { Route, DefaultRoute, NotFoundRoute } from 'react-router';
-
+import { Router, Route, IndexRoute } from 'react-router';
+import { createHistory, createMemoryHistory } from 'history';
 //Components
 var App = require('./components/app/');
 var Home = require('./components/home/');
 var PageOne =  require('./components/pageOne/');
 var PageTwo = require('./components/pageTwo/');
 
+var history = typeof window === 'undefined' ? createMemoryHistory : createHistory;
+
+
 export default (
-      <Route handler={ App } path="/" >
-        <DefaultRoute handler={ Home } />
-        <Route path="/pageone" handler={ PageOne } />
-        <Route path="/pagetwo" handler={ PageTwo } />
-        <NotFoundRoute handler={ Home } />
-      </Route>
-    );
+  <Router history={ history() }>
+    <Route component={ App } path="/" >
+      <IndexRoute component={ Home } />
+      <Route path="/pageone" component={ PageOne } />
+      <Route path="/pagetwo" component={ PageTwo } />
+    </Route>
+  </Router>
+);

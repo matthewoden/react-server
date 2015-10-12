@@ -39,7 +39,7 @@ module.exports = {
     //clean out assets directory.
     new Clean(['../assets']), //Clean out build directory
     //hashed commons package.
-    new webpack.optimize.CommonsChunkPlugin('common', '[hash].common.js', {allChunks:false}),
+    new webpack.optimize.CommonsChunkPlugin('common', '[hash].common.js'),
     //no repeats
     new webpack.optimize.DedupePlugin(),
     //get hashed css

@@ -19,7 +19,7 @@ module.exports = {
     loaders:commonLoaders.concat(
     {
       test: /\.css$/,
-      loader: 'style-loader!css-loader?modules&&localIdentName=[name]_[local]!postcss',
+      loader: ExtractTextPlugin.extract('style-loader','css-loader?modules&&localIdentName=[name]_[local]!postcss'),
     })
   },
   server: {
@@ -29,5 +29,3 @@ module.exports = {
     }),
   }
 };
-
-

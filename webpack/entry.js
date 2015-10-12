@@ -3,7 +3,8 @@
 module.exports ={
 client: {
   common: [
-  './client/components/app/',
+  './client/components/navigation/',
+  './client/components/page/',
   'react',
   'react-router',
   'amplify-store'

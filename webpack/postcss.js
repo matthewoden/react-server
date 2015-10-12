@@ -1,17 +1,15 @@
 'use strict';
 
-var autoprefixer = require('autoprefixer-core');
+var autoprefixer = require('autoprefixer');
 var csswring     = require('csswring');
-var simplevars = require('postcss-simple-vars');
-var cssImport = require('postcss-import');
+var precss = require('precss');
 
 //css variables
-var variables = require('../client/components/variables');
+//var variables = require('../client/components/variables');
 
 var commonCSS = [
 autoprefixer({browsers: ['last 2 versions']}),
-simplevars({ variables: function() { return variables; }}),
-cssImport
+precss()
 ];
 
 module.exports = {
