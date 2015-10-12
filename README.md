@@ -1,9 +1,9 @@
 # React-Seed (Server-side Edition):
-Just a quick-start application for small projects, prototyping, and hackathons. Compiled with babel, it assumes development will happen with ES6. React is compiled with babel via Webpack and uses a hot loader. Styles are rendered via sass (for now).
+Just a quick-start application for small projects, prototyping, and hackathons. Compiled with babel, it assumes development will happen with ES6. Styles are rendered via PostCSS (with PreCSS).
 
-This seed also comes equipped with react-router for routing, and amplify-store for client session management.
+This seed also comes equipped with react-router 1.0 for routing, and amplify-store for client session management.
 
-This server-side seed is very much a work in progress. Use at your own peril. Improvements generally start in my [client-side seed](https://github.com/matthewoden/react-client), then migrate to this one. Coming soon: PostCSS, async route handlers.
+This server-side seed is very much a work in progress. Use at your own peril. Improvements generally start in my [client-side seed](https://github.com/matthewoden/react-client), then migrate to this one.
 
 ##Installation
 Clone the repo:
@@ -15,12 +15,11 @@ Install Node Dependancies:
 
 ```npm install```
 
-Install Testing Dependancies (React.js):
 
-```npm install jest -g```
+##Changelog
+October 12th - Update to PostCSS, update dependancies.
 
 ##Roadmap
-- Migrate PostCSS, serverside CSS, localCSS, async routing from react-client.
 - Automate heroku deployment
 - Include server side tests. Probably mocha.
 - Yeoman automation?
