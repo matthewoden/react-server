@@ -13,7 +13,9 @@ var makeStats = function() {
   this.plugin('done', function(stats) {
     require('fs').writeFileSync(
       './client/stats.json',
-      JSON.stringify(stats.toJson()));
+      JSON.stringify({
+        hash: stats.toJson().hash
+      }));
   });
 };
 

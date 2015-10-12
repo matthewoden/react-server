@@ -2,11 +2,10 @@
 import React from 'react';
 import DocumentTitle from 'react-document-title';
 
+import styles from './page.css';
 import '../global/normalize.css';
 import '../global/typography.css';
 import '../global/global.css';
-
-import styles from './page.css';
 
 export default class Page extends React.Component {
   render(){

@@ -37,7 +37,7 @@ if(process.env.NODE_ENV === "production"){
 module.exports = {
   client:[
     //clean out assets directory.
-    new Clean(['../assets']), //Clean out build directory
+    new Clean(['../assets/']), //Clean out build directory
     //hashed commons package.
     new webpack.optimize.CommonsChunkPlugin('common', '[hash].common.js'),
     //no repeats
@@ -50,5 +50,3 @@ module.exports = {
 
   server:[new webpack.optimize.DedupePlugin()].concat(prodPlugins),
 };
-
-

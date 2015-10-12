@@ -1,6 +1,7 @@
 'use strict';
 import React from 'react';
 
+
 class FullPage extends React.Component {
   render() {
     return (
